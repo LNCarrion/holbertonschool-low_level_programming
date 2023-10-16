@@ -6,6 +6,7 @@
 * Description: this program prints using the main funcion
 * Return: 0
 */
+
 int main(void)
 {
 	char c;
