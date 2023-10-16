@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
-* main - print the string 
+* main - print the string
 *
 * Description: this program prints using the main funcion
 * Return: 0
