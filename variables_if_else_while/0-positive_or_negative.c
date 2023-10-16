@@ -8,7 +8,7 @@
 /**
 *main - will print a random number
 *
- * Description:determine if the random number is positive or negative
+* Description:determine if the random number is positive or negative
 * Return: 0
 */
 int main(void)
@@ -18,13 +18,11 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
-	return (0);
-
 	if (n > 0)
-		printf("%d is positive/n", n);
+		printf("%d is positive\n", n);
 	else if (n < 0)
-		printf("%d is negative/n", n);
+		printf("%d is negative\n", n);
 	else
-		printf("%d is zero/n", n);
+		printf("%d is zero\n", n);
 	return (0);
 }
