@@ -17,7 +17,10 @@ int main(void)
 	char l;
 
 	for
-		(l = 'a'; l <= 'z'; l++);
+		(l = 'a';
+		 l <= 'z';
+		 l++);
+		putchar(l);
 	if
 		(l != 'q' && l != 'e');
 		putchar(l);
