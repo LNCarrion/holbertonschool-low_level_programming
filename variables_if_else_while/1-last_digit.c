@@ -20,10 +20,10 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	l = n % 10;
 
-	printf("the last digit of %d is %d ", n, l);
+	printf("Last digit of %d is %d ", n, l);
 
 	if (l > 5)
-		printf("is greater that 5\n");
+		printf("and is greater that 5\n");
 	else if (l == 0)
 		printf("and is 0\n");
 	else if (l < 6)
