@@ -18,7 +18,7 @@ int main(void)
 
 	for
 		(l = 0;
-		 l >= 10;
+		 l <= 10;
 		 l++);
 	{
 		printf("%d/n", l);
