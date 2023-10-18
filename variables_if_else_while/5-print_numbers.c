@@ -21,7 +21,7 @@ int main(void)
 		 l <= 10;
 		 l++);
 	{
-		printf("%d/n", l);
+		printf("%d\n", l);
 		}
 	return (0);
 }
