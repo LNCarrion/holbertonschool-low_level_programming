@@ -19,11 +19,10 @@ int main(void)
 		putchar((l % 10) + '0');
 		if (l < 9)
 		{
-			continue;
 			putchar(',');
 			putchar(' ');
 		}
-	putchar('\n');
 	}
+		putchar('\n');
 	return (0);
 }
