@@ -12,12 +12,17 @@
 * Return: 0
 */
 
-int print_sign(int l)
+int main(void)
 {
+	int l;
+
 	for
 		(l = 0;
 		 l >= 10;
 		 l++);
+	{
+		putchar(l);
+		}
 	putchar('\n');
 	return (0);
 }
