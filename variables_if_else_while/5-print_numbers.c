@@ -12,10 +12,8 @@
 * Return: 0
 */
 
-int main(void)
+int print_sign(int l)
 {
-	int l;
-
 	for
 		(l = 0;
 		 l >= 10;
