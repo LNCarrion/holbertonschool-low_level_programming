@@ -21,8 +21,7 @@ int main(void)
 		 l >= 10;
 		 l++);
 	{
-		putchar(l);
+		printf("%d/n", l);
 		}
-	putchar('\n');
 	return (0);
 }
