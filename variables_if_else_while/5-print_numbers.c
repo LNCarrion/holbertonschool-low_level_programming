@@ -12,9 +12,9 @@
 * Return: 0
 */
 
-int main()
+int main(void)
 {
-	int l;
+	char l;
 
 	for
 		(l = 0;
