@@ -21,7 +21,8 @@ int main(void)
 		 l <= 9;
 		 l++);
 	{
-		printf("%d\n", l);
+		putchar(l + '0');
 		}
+	putchar('\n');
 	return (0);
 }
