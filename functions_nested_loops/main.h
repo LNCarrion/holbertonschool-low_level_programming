@@ -1,4 +1,2 @@
-/**
- *nested loop funtions
-*/
-
+int _putchar(char c);
+void print_alphabet (void);
