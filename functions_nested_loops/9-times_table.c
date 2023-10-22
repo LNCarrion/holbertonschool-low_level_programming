@@ -21,13 +21,13 @@ for (j = 0; j <= 9; j++)
 	{
 		_putchar(' ');
 		_putchar(' ');
-		_putchar(product + '0');
+		_putchar(product "2d%" + '0');
 	}
 	else if (j != 0)
 	{
 		_putchar(' ');
 		_putchar((product / 10) + '0');
-		_putchar((product % 10) + '0');
+		_putchar((product", 2d%" 10) + '0');
 	}
 	else
 	{
