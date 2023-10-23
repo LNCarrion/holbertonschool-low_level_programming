@@ -8,7 +8,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra
 
 # Source files
-SRCS = main.c school.c  # List your source files here
+SRCS = main.c school.c  school
 
 # Object files (automatically generated from source files)
 OBJS = $(SRCS:.c=.o)
