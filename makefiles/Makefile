@@ -11,7 +11,7 @@ CFLAGS = -Wall -Wextra
 SRCS = main.c file1.c file2.c  # List your source files here
 
 # Object files (automatically generated from source files)
-OBJS = $(SRCS:.c=.o)
+OBJS = $(0-makefile:.c=.o)
 
 all: $(TARGET)
 
