@@ -8,10 +8,10 @@ CC = gcc
 CFLAGS = -Wall -Wextra
 
 # Source files
-SRCS = main.c file1.c file2.c  # List your source files here
+SRCS = main.c school.c  # List your source files here
 
 # Object files (automatically generated from source files)
-OBJS = $(0-Makefile:.c=.o)
+OBJS = $(SRCS:.c=.o)
 
 all: $(TARGET)
 
