@@ -13,19 +13,20 @@
 void print_array(int *a, int n)
 {
 	int i;
+	int j;
 
 	if (n <= 0)
 		return;
 
 	for (i = 0; i < n; i++)
 	{
-		if(a[i] == 0)
-			continue;
-
-		printf("%d", a[i]);
-
-		if (i != n - 1)
+		if (a[i] != '\0')
+		{
+			if(j != 0)
 			printf(", ");
+			printf("%d", a[i]);
+			j++;
+		}
 	}
 	printf("\n");
 }
