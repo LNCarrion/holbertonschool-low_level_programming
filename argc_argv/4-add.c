@@ -7,17 +7,19 @@
  * @s: the string to check
  * Return: 1 if it's a number, 0 otherwise
  */
-int is_number(char *s) {
-    if (*s == '\0')
-        return (0);
+int is_number(char *s)
+{
+	if (*s == '\0')
+		return (0);
 
-    while (*s) {
-        if (*s < '0' || *s > '9')
-            return (0);
-        s++;
-    }
+	while (*s)
+	{
+		if (*s < '0' || *s > '9')
+			return (0);
+		s++;
+	}
 
-    return (1);
+	return (1);
 }
 
 /**
