@@ -1,6 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
+
+/**
+ * is_number - checks if a string is a positive number
+ * @s: the string to check
+ * Return: 1 if it's a number, 0 otherwise
+ */
+int is_number(char *s) {
+    if (*s == '\0')
+        return (0);
+
+    while (*s) {
+        if (*s < '0' || *s > '9')
+            return (0);
+        s++;
+    }
+
+    return (1);
+}
+
 /**
  * main - adds positive numbers
  * @argc: number of arguments
@@ -23,6 +42,12 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
+		if (!is_number(argv[i]))
+		{
+			printf("Error\n");
+			return (1);
+		}
+
 		num = atoi(argv[i]);
 		if (num <= 0)
 		{
