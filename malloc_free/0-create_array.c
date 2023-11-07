@@ -6,7 +6,8 @@
  * @size: the size of the array
  * @c: the character for initialitiation
  *
- *Return: If size is 0 or memory allocation fails, returns NULL; otherwise, returns a pointer to the new array.
+ *Return: If size is 0 or memory allocation fails, returns NULL;
+ *otherwise, returns a pointer to the new array.
  */
 
 char *create_array(unsigned int size, char c)
