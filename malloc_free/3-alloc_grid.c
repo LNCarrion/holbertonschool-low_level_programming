@@ -9,40 +9,34 @@
  * Return: A pointer to the allocated 2-dimensional array, or NULL on failure.
  */
 
-int **alloc_grid(int width, int height)
-{
-	int col, row;
-	int **doublePtr;
+int **alloc_grid(int width, int height) {
+	int **grid;
+	int i, j;
 
-	if (width < 1 || height < 1)
-	{
+	if (width <= 0 || height <= 0)
 		return (NULL);
-	}
 
-	doublePtr = malloc(height * sizeof(int *));
+	grid = (int **)malloc(sizeof(int *) * height);
 
-	if (doublePtr == NULL)
-	{
+	if (grid == NULL)
 		return (NULL);
-	}
 
-	for (col = 0; col < height; col++)
-	{
-		doublePtr[col] = malloc(width * sizeof(int));
-
-		if (doublePtr[col] == NULL)
-		{
-			for (row = 0; row < col; row++)
-				free(doublePtr[row]);
-
-			free(doublePtr);
+	for (i = 0; i < height; i++) {
+		grid[i] = (int *)malloc(sizeof(int) * width);
+		if (grid[i] == NULL) {
+			for (j = 0; j < i; j++) {
+				free(grid[j]);
+			}
+			free(grid);
 			return (NULL);
 		}
+	}
 
-		for (row = 0; row < width; row++)
-		{
-			doublePtr[col][row] = 0;
+	for (i = 0; i < height; i++) {
+		for (j = 0; j < width; j++) {
+			grid[i][j] = 0;
 		}
 	}
-		return (doublePtr);
+
+	return (grid);
 }
