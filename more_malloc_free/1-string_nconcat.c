@@ -10,7 +10,7 @@
  * Return: a pointer to the concatenated string or NULL on failure
  */
 
-char *string_ncat(char *s1, char *s2, unsigned int n)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int len1 = 0, len2 = 0, i, j;
 	char *concatenated;
@@ -26,6 +26,11 @@ char *string_ncat(char *s1, char *s2, unsigned int n)
 
 	while (s2[len2] != '\0')
 		len2++;
+
+	if (n >= len2)
+		n = len2;
+
+	concatenated = malloc(len1 + n + 1);
 
 	if (concatenated == NULL)
 		return (NULL);
