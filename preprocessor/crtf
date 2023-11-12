@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "write the name of the file" 
+read filename
+touch $filename
+chmod +x $filename
+vim $filename
