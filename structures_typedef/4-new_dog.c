@@ -41,6 +41,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 }
 /**
  * free_dog - will free the memory
+ * @d: pointer for dog
  */
 
 void free_dog(dog_t *d)
