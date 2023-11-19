@@ -22,4 +22,14 @@ void print_name(char *name, void (*f)(char *));
  */
 void array_iterator(int *array, size_t size, void (*action)(int));
 
+/**
+ * int_index - searches for an integer in an array
+ * @array: pointer to the array
+ * @size: number of elements in the array
+ * @cmp: pointer to the function to be used to compare values
+ *
+ * Return: index of the first element for which cmp doesn't return 0, -1 if no match or size <= 0
+ */
+int int_index(int *array, int size, int (*cmp)(int));
+
 #endif /* FUNCTION_POINTERS_H */
