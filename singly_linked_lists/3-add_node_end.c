@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "lists.h"
+#include "2-add_node.c"
 
 /**
  * add_node_end - Adds a new node at the end of a list_t list.
@@ -13,36 +14,34 @@
 
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new_node, *temp;
+	list_t *pointerchain = NULL;
+	list_t *h = *head;
 
-	if (str == NULL)
-		return (NULL);
-
-	new_node = malloc(sizeof(list_t));
-	if (new_node == NULL)
-	return (NULL);
-
-	new_node->str = strdup(str);
-	if (new_node->str == NULL)
+	if (!h)
 	{
-		free(new_node);
+		add_node(head, str);
+		return (*head);
+
+	}
+	while (h->next)
+	{
+		h = h->next;
+	}
+	pointerchain = malloc(sizeof(list_t));
+	if (!pointerchain)
+	{
+		free(pointerchain);
 		return (NULL);
 	}
 
-	new_node->next = NULL;
+	pointerchain->str = strdup(str);
+	pointerchain->len = strlen(str);
+	pointerchain->next = NULL;
 
-	if (*head == NULL)
-		*head = new_node;
-
+	if (!head)
+		*head = pointerchain;
 	else
-	{
-		temp = *head;
-		while (temp->next != NULL)
-		{
-			temp = temp->next;
-		}
-		temp = temp->next;
-	}
+		h->next = pointerchain;
 
-	return (new_node);
+	return (pointerchain);
 }
