@@ -2,15 +2,11 @@
 #include "lists.h"
 
 /**
- * dlistint_len - Get the number of elements in a linked dlistint_t list.
- * @h: A pointer to the head of the doubly linked list.
+ * add_dnodeint - Adds a new node at the beginning of a dlistint_t list.
+ * @head: A pointer to the head of the doubly linked list.
+ * @n: The data to be stored in the new node.
  *
- * Description:
- *   This function traverses a doubly linked list and counts the number of
- *   elements (nodes) in the list.
- *
- * Return:
- *   The number of elements (nodes) in the linked list.
+ * Return: The address of the new element, or NULL if it failed.
  */
 
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
@@ -22,7 +18,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 
 	new_node = malloc(sizeof(dlistint_t));
 	if (new_node == NULL)
-		return NULL;
+		return (NULL);
 
 	new_node->n = n;
 	new_node->prev = NULL;
