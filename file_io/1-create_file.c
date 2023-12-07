@@ -1,22 +1,6 @@
 #include "main.h"
 
 /**
- * _strlen - gets the length of a string
- * @s: string being evaluated
- *
- * Return: lengt of string
- */
-
-int _strlen(char *s)
-{
-	int i = 0;
-
-	while(*(s+i))
-		++i;
-	return (i);
-}
-
-/**
  * create_file - Creates a file and writes content to it
  * @filename: Name of the file to create
  * @text_content: NULL terminated string to write to the file
