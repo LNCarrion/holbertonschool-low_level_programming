@@ -49,7 +49,8 @@ int main(int argc, char *argv[])
 		print_error_and_exit(98, "Error: Can't read from file %s\n", argv[1], fd_from);
 
 	if (close(fd_from) == -1)
-		print_error_and_exit(100, "Error: Can't close fd %d\n", argv[1], fd_to);
+		print_error_and_exit(100,
+"Error: Can't close fd %d\n", argv[1], fd_to);
 
 	if(close(fd_to) == -1)
 		print_error_and_exit(100, "Error: Can't close fd %d\n", argv[2], -1);
